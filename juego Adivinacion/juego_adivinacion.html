@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+
+
+    let numeroLoteria = parseInt(prompt("Eliga es numero de boletos"));
+    let numeroPensado = Math.round(Math.random()*numeroLoteria);
+    let numeroLanzado = parseInt(prompt("Elija un numero de entre 0-" + numeroLoteria));
+
+    if (numeroLanzado > numeroPensado) {
+        imprimir("Incorrecto, El Numero lanzado es menor")
+    } else if(numeroLanzado < numeroPensado)  {
+        imprimir("Incorrecto, El numero lanzado es mayor")
+    }else{
+        imprimir("Correcto, Es el numero pensado")
+    }
+
+    // if (numeroPensado != numeroLanzado) {
+
+    //     imprimir("Error, el numero pensado era: " + numeroPensado);
+        
+    // }else{
+    //     imprimir ("Correcto, usted acerto")
+    // }
+</script>
+</html>

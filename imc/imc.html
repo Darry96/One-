@@ -36,9 +36,36 @@
     // var imcVictor = calcularImc("Victor",70,1.69);
     // var imcFelipe = calcularImc("Felipe", 78,1.70);
     
+    if (imcCalculado < 18.5){
+
+        imprimir("El IMC es bajo de lo recomendado");
+
+    }
+
+    if (imcCalculado >=18.5){
+
+        if(imcCalculado < 25 ){
+
+            imprimir("El IMC esta en lo normal");
+
+        }
+    }
 
 
-    imprimir("El promedio de los imc calculado de Victor y Felipe es " + (imcVictor+ imcFelipe)/2 );
+    if (imcCalculado >=25 ){
+
+        if(imcCalculado < 30){
+            imprimir("El IMC esta en sobrepeso")
+        }
+
+    }
+
+    if (imcCalculado > 30){
+        imprimir("El IMC esta en obesidas")
+    }
+
+
+    //imprimir("El promedio de los imc calculado de Victor y Felipe es " + (imcVictor+ imcFelipe)/2 );
 
     /* var pesoVictor =70;
     var alturaVictor = 1.79;
