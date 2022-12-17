@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="mail_form">
+        <input type="text" name="subject" id="subject"/>
+        <textarea name="message" id="message"></textarea>
+        <input type="submit" name="submit" id="submit" value="Send"/>
+    </form>
+    
+    
+    <form id="mail_form">
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject"/>
+    
+        <label for="message">Message:</label>
+        <textarea name="message" id="message"></textarea>
+    
+        <input type="submit" name="submit" id="submit" value="Send"/>
+    </form>
+    
+    
+    <form id="mail_form">
+        <fieldset class="message">
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" id="subject"/>
+    
+            <label for="message">Message:</label>
+            <textarea name="message" id="message"></textarea>
+        </fieldset>
+    
+        <fieldset class="submitReset">
+            <input type="submit" name="submit" id="submit" value="Send"/>
+        </fieldset>
+    </form>
+    
+    <div class="six columns">
+        <form>
+          <fieldset>
+            <div class="row">
+              <input name="name" type="text" required placeholder="NAME">
+              <input name="email" type="email" required placeholder="EMAIL">
+            </div>
+            <input name="subject" type="text" placeholder="SUBJECT">
+            <textarea rows="8" placeholder="MESSAGE..."></textarea>
+          </fieldset>
+          <input type="submit" value="SUBMIT">
+        </form>
+      </div>
+      
+    
+    <form id="mail_form" action="http://path.to.server-side-script.com/script.php" method="post" <!-- or 'get' -->>
+    
+</body>
+</html>

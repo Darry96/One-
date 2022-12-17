@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programa IMC</h1>
+</body>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularImc(peso,altura){
+        return imc = peso / (altura*altura);
+        
+    }
+
+    var nombreInformado = prompt("Informe su peso")
+    var pesoInformado = prompt(nombreInformado + " Informe su peso");
+    var alturaInformado = prompt(nombreInformado + " Informe su altura"); 
+
+    imcCalculado = calcularImc(pesoInformado,alturaInformado);
+    imprimir(nombreInformado + " imc calculado es: " + imcCalculado);
+
+    // var imcVictor = calcularImc("Victor",70,1.69);
+    // var imcFelipe = calcularImc("Felipe", 78,1.70);
+    
+    if (imcCalculado < 18.5){
+
+        imprimir("El IMC es bajo de lo recomendado");
+
+    }
+
+    if (imcCalculado >=18.5){
+
+        if(imcCalculado < 25 ){
+
+            imprimir("El IMC esta en lo normal");
+
+        }
+    }
+
+
+    if (imcCalculado >=25 ){
+
+        if(imcCalculado < 30){
+            imprimir("El IMC esta en sobrepeso")
+        }
+
+    }
+
+    if (imcCalculado > 30){
+        imprimir("El IMC esta en obesidas")
+    }
+
+
+    //imprimir("El promedio de los imc calculado de Victor y Felipe es " + (imcVictor+ imcFelipe)/2 );
+
+    /* var pesoVictor =70;
+    var alturaVictor = 1.79;
+    var imcVictor = pesoVictor / (alturaVictor*alturaVictor);
+    imcVictor = calcularImc(pesoVictor,alturaVictor);
+    imprimir("El IMC de Victor es de: " + imcVictor)
+
+    var pesoFelipe =78;
+    var alturaFelipe = 1.70;
+    imcFelipe =calcularImc(pesoFelipe,alturaFelipe);
+    imprimir("El IMC de Felipe es de: " + imcFelipe); */
+
+
+
+</script>
+</html>

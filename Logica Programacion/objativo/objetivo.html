@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas height="400" width="600"></canvas>
+</body>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    let x = 0;
+    let radio = 10;
+    let xAleatorio;
+    let yAleatorio;
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(0,0,600,400); 
+
+    function disenarCirculo(x,y,radio,color) {
+        
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI);
+        pincel.fill();
+
+    }
+
+    function limpiarPantalla() {
+        pincel.clearRect(0,0,600,400);
+    }
+
+    function actualizarPantalla() {
+        
+        limpiarPantalla();
+        xAleatorio = sortearPosition(600);
+        yAleatorio = sortearPosition(400);
+        disenarObjetivo(xAleatorio,yAleatorio);
+        x = x++
+
+    }
+
+    function disenarObjetivo(x,y) {
+        disenarCirculo(x,y,radio+20,"red");
+        disenarCirculo(x,y,radio+10,"white");
+        disenarCirculo(x,y,radio,"red");
+    }
+
+    function sortearPosition(maximo) {
+        return Math.floor(Math.random()*maximo);
+    }
+
+    function disparar(evento) {
+        
+        let x = evento.pageX - pantalla.offsetLeft;
+        let y = evento.pageY - pantalla.offsetTop;
+
+        if ((x < xAleatorio + radio) &&
+            (x > xAleatorio - radio ) &&
+            (y < yAleatorio + radio) &&
+            (y > yAleatorio - radio) ) {
+            alert("Usted acerto");
+        }
+
+        
+    }
+    
+    setInterval(actualizarPantalla,1000);
+
+    pantalla.onclick = disparar;
+    
+</script>
+</html>
