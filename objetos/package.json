@@ -1,0 +1,12 @@
+{
+  "name": "cuentasbanpopular",
+  "version": "1.0.0",
+  "description": "Gestion de cuentas cuentas corrientes Banco popular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cursos vic",
+  "license": "ISC",
+  "type": "module"
+}
